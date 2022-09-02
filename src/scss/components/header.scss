@@ -1,0 +1,94 @@
+.header {
+    &__upmenu {
+        background-color: $black;
+        height: 4.8rem;
+        color: $white;
+        font-size: $base-font-size;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+        }
+    }
+    &__city {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        img {
+            height: 2.4rem;
+            width: 1.7rem;
+        }
+        a {
+            color: $white;
+            font-size: $base-font-size;
+        }
+    }
+    &__logo {
+        img {
+            width: 13.3rem;
+            height: 2.7rem;
+        }
+    }
+
+    &__downmenu {
+        height: 9.7rem;
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, max-content);
+            gap: 3rem;
+            align-items: center;
+            height: 100%;
+        }
+    }
+    &__catalog {
+        img {
+            width: 2rem;
+            height: 2rem;
+        }
+        button {
+            background-color: $base-color;
+            border-radius: 9px;
+            padding: 1.5rem 2.5rem;
+            color: $white;
+            font-size: $base-font-size;
+            gap: 0.7rem;
+            display: flex;
+        }
+    }
+    &__search {
+        background-color: $base-color;
+        width: 85.1rem;
+        height: 5.5rem;
+        border-radius: 9px;
+        display: flex;
+        align-items: center;
+        input {
+            width: 79.4rem;
+            height: 5.1rem;
+            border: none;
+            font-size: 1.5rem;
+            border-radius: 0.7rem;
+            margin: 0.2rem 0;
+            margin-left: 0.2rem;
+            text-indent: 1.4rem;
+        }
+        img {
+            margin-left: 1.3rem;
+            width: 2.5rem;
+            height: 2.5rem;
+            cursor: pointer;
+        }
+    }
+    &__buttons {
+        display: flex;
+        gap: 1.5rem;
+        img {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
+        button {
+            padding: 1.5rem;
+        }
+    }
+}
