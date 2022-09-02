@@ -1,0 +1,11 @@
+.banner {
+    cursor: pointer;
+    &__img {
+        img {
+            border-radius: 12px;
+            width: 100%;
+            object-fit: cover;
+        }
+        
+    }
+}

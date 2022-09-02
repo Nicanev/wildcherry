@@ -1,0 +1,62 @@
+.products {
+
+}
+.card {
+    &__img {
+        width: max-content;
+        img {
+            width: 25.2rem;
+            height: 33.6rem;
+            object-fit: cover;
+        }
+        position: relative;
+    }
+    &__discount {
+        position: absolute;
+        padding: 0.5rem 0.7rem;
+        bottom: 0;
+        left: 8;
+        background-color: #FDEEF9;
+        color: $base-color;
+        font-size: $card-font-size;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+    &__advertisement {
+        position: absolute;
+        right: 8;
+        bottom: 0;
+        font-weight: bold;
+        font-size: $card-font-size;
+        background-color: $base-color;
+        border-radius: 8px;
+        padding: 0.7em 0.9em;
+        color: $white;
+    }
+    &__body {
+        font-size: $card-font-size;
+        margin-top: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+    &__price {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+    }
+    &__current-price {
+        color: $black;
+        font-size: 1.8rem;
+        font-weight: bold;
+    }
+    &__old-price {
+        text-decoration: line-through;
+        color: gray;
+        font-weight: bold;
+    }
+    &__title {
+        width: 25.3rem;
+        color: $black;
+    }
+}

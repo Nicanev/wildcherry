@@ -2,5 +2,26 @@ extends ./templates/template_main.pug
 
 block content 
     main.main
-        .container
+        section.banner
+            .banner__container 
+                .banner__img
+                    img(src="../img/banners/banner_1.jpg?as=webp", alt="Banner")
+        section.products 
+            .products__container 
+                ul.products__list
+                    li.products__product.card
+                            .card__img 
+                                img(src="../img/products/product_1.jpg?as=webp", alt="Nothing Phone")
+                                .card__discount -52%
+                                .card__advertisement Реклама
+                            .card__body
+                                .card__price
+                                    .card__current-price 41 613 ₽
+                                    .card__old-price 49 900 ₽
+                                .card__title Смартфон Nothing Nothing Phone 1 8/256 ГБ, черный
+
+
+                            
+                                
+                
             

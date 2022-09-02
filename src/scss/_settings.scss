@@ -13,7 +13,6 @@ html {
 }
 
 .wrapper {
-    display: grid;
     min-height: 100vh;
     overflow: hidden;
 }
@@ -82,6 +81,10 @@ p {
     display: none;
 }
 
+.active {
+    display: block;
+}
+
 .btn {
     cursor: pointer;
     border: none;
@@ -92,9 +95,8 @@ p {
     background-color: inherit;
 }
 
-.container {
+[class*="__container"] {
     max-width: 163.4rem;
-    padding: 0 15px;
     margin: 0 auto;
 }
 
