@@ -1,0 +1,26 @@
+{
+  "name": "wildcherry",
+  "version": "1.0.0",
+  "description": "website of the international marketplace of clothing, footwear, electronics, children's goods, household goods and other goods.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "WildCherry",
+    "marketplace"
+  ],
+  "author": "Nikita Lebedev",
+  "license": "ISC",
+  "targets": {
+    "web": {
+      "context": "browser",
+      "publicUrl": "./"
+    }
+  },
+  "devDependencies": {
+    "@parcel/transformer-pug": "^2.7.0",
+    "@parcel/transformer-sass": "^2.7.0",
+    "parcel": "^2.7.0"
+  }
+}
