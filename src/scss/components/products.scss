@@ -1,9 +1,28 @@
 .products {
+    &__title {
+        margin: 3.5rem 0;
+        font-size: $title-section-font-size;
+        font-weight: bold;
+        color: $black;
+    }
+    &__list {
+        display: grid;
+        gap: 3.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        @media (max-width: 48em) {
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+        @media (max-width: 507px) {
+            justify-items: center;
+        }
+        
+    }
 
 }
 .card {
+    padding: 2.2rem 2rem;
+    width: max-content;
     &__img {
-        width: max-content;
         img {
             width: 25.2rem;
             height: 33.6rem;
@@ -58,5 +77,27 @@
     &__title {
         width: 25.3rem;
         color: $black;
+    }
+    &__rating {
+        display: flex;
+        gap: 0.5rem;
+        
+        svg {
+            width: 9.6rem;
+            height: 1.6rem;
+        }
+        span {
+            color: $gray;
+        }
+    }
+    &__btn {
+        margin-top: 1.2rem;
+        button {
+            padding: 0.7rem 2.2rem;
+            background-color: $base-color;
+            color: $white;
+            font-weight: bold;
+            border-radius: 9px;
+        }
     }
 }
