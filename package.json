@@ -2,19 +2,24 @@
   "name": "wildcherry",
   "version": "1.0.0",
   "description": "website of the international marketplace of clothing, footwear, electronics, children's goods, household goods and other goods.",
+  "source": "src/pug/index.pug",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "parcel build",
+    "deploy": "gh-pages -d dist",
+    "predeploy": "npm run build"
   },
   "keywords": [
     "WildCherry",
     "marketplace"
   ],
+  "homepage": "https://nicanev.github.io/wildcherry/",
   "author": "Nikita Lebedev",
   "license": "ISC",
   "targets": {
     "web": {
       "context": "browser",
-      "publicUrl": "./"
+      "publicUrl": "/wildcherry/"
     }
   },
   "devDependencies": {
@@ -22,5 +27,8 @@
     "@parcel/transformer-sass": "^2.7.0",
     "parcel": "^2.7.0",
     "sharp": "^0.29.3"
+  },
+  "dependencies": {
+    "gh-pages": "^4.0.0"
   }
 }

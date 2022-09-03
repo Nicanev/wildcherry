@@ -112,10 +112,9 @@ p {
       -webkit-text-size-adjust: none;
     }
   
-    .container {
+    [class*="__container"] {
       padding: 0 3rem; 
       width: 100%;
     }
   }
 
- 

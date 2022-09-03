@@ -1,0 +1,55 @@
+.brands {
+    &__title {
+        margin: 3.5rem 0;
+        margin-bottom: 2rem;
+        font-size: $title-section-font-size;
+        font-weight: bold;
+        color: $black;
+        a {
+            cursor: pointer;
+            margin-left: 1rem;
+            font-size: $card-font-size;
+            color: $base-color;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+    [class*="__container"] {
+        padding: 0;
+    }
+    &__list {
+        margin-top: 3.5rem;
+        display: flex;
+        gap: 3rem;
+    }
+    &__item {
+        img {
+            cursor: pointer;
+            width: 23.5rem;
+            height: 13.2rem;
+        }
+    }
+}
+.category {
+    
+    &__list {
+        display: flex;
+        gap: 1.5rem;
+    }
+
+    button {
+        font-size: $card-font-size;
+        color: $black;
+        padding: 0.8rem 2.4rem;
+        border: 1px solid $black;
+        border-radius: 16px;
+        transition: 0.2s;
+    }
+    button:hover {
+        border: 1px solid $base-color;
+        color: $base-color;
+        transition: 0.2s;
+    }
+}
