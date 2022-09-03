@@ -96,6 +96,10 @@ p {
     font-size: 1.5625vw;
   }
 
+  .for-mobile {
+    display: block;
+  }
+
   body {
     -webkit-text-size-adjust: none;
   }
@@ -157,6 +161,13 @@ p {
   display: grid;
 }
 
+@media (max-width: 48em) {
+  .header__downmenu [class*="__container"] {
+    justify-content: space-between;
+    display: flex;
+  }
+}
+
 .header__catalog img {
   width: 2rem;
   height: 2rem;
@@ -165,18 +176,24 @@ p {
 .header__catalog button {
   color: #fff;
   background-color: #de3162;
-  border-radius: 9px;
+  border-radius: .9rem;
   gap: .7rem;
   padding: 1.5rem 2.5rem;
   font-size: 1.8rem;
   display: flex;
 }
 
+@media (max-width: 48em) {
+  .header__catalog {
+    display: none;
+  }
+}
+
 .header__search {
   width: 85.1rem;
   height: 5.5rem;
   background-color: #de3162;
-  border-radius: 9px;
+  border-radius: .9rem;
   align-items: center;
   display: flex;
 }
@@ -198,6 +215,38 @@ p {
   margin-left: 1.3rem;
 }
 
+@media (max-width: 48em) {
+  .header__search {
+    display: none;
+  }
+}
+
+.header__search_mobile {
+  position: relative;
+}
+
+.header__search_mobile input {
+  width: 100%;
+  height: 5.4rem;
+  text-indent: 4rem;
+  background-color: #f6f6f6;
+  border: 1px solid #de3162;
+  border-radius: .9rem;
+  font-size: 1.5rem;
+}
+
+.header__search_mobile .loop {
+  z-index: 1000;
+  position: absolute;
+  top: 1.9rem;
+  left: 1.5rem;
+}
+
+.header__search_mobile .loop svg {
+  width: 1.7rem;
+  height: 1.7rem;
+}
+
 .header__buttons {
   gap: 1.5rem;
   display: flex;
@@ -206,6 +255,13 @@ p {
 .header__buttons img {
   width: 2.4rem;
   height: 2.4rem;
+}
+
+@media (max-width: 48em) {
+  .header__buttons img {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 .header__buttons button {
@@ -218,8 +274,19 @@ p {
   display: flex;
 }
 
+@media (max-width: 48em) {
+  .header__buttons button span {
+    display: none;
+  }
+
+  .header__buttons {
+    gap: .5rem;
+  }
+}
+
 .banner {
   cursor: pointer;
+  margin-top: 3.5rem;
 }
 
 .banner__img img {
@@ -263,7 +330,7 @@ p {
 .card__discount {
   color: #de3162;
   background-color: #fdeef9;
-  border-radius: 8px;
+  border-radius: .8rem;
   padding: .5rem .7rem;
   font-size: 1.4rem;
   font-weight: bold;
@@ -276,7 +343,7 @@ p {
 .card__advertisement {
   color: #fff;
   background-color: #de3162;
-  border-radius: 8px;
+  border-radius: .8rem;
   padding: .7em .9em;
   font-size: 1.4rem;
   font-weight: bold;
@@ -339,7 +406,7 @@ p {
 .card__btn button {
   color: #fff;
   background-color: #de3162;
-  border-radius: 9px;
+  border-radius: .9rem;
   padding: .7rem 2.2rem;
   font-weight: bold;
 }
@@ -387,7 +454,7 @@ p {
 .category button {
   color: #242734;
   border: 1px solid #242734;
-  border-radius: 16px;
+  border-radius: 1.6rem;
   padding: .8rem 2.4rem;
   font-size: 1.4rem;
   transition: all .2s;
