@@ -4,6 +4,10 @@
         display: flex;
         justify-content: space-between;
         padding-top: 5rem;
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 6rem;
+        }
     }
     &__logo {
         img {
@@ -84,6 +88,10 @@
         padding: 5rem 0;
         margin-top: 5.7rem;
         border-top: 1px solid rgba(217, 218, 225, 0.8);
+        @media (max-width: 48em) {
+            flex-direction: column;
+            gap: 3rem;
+        }
         a {
             color: #7E838C;
             font-size: 1.6rem;
