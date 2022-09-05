@@ -25,10 +25,12 @@
   "devDependencies": {
     "@parcel/transformer-pug": "^2.7.0",
     "@parcel/transformer-sass": "^2.7.0",
+    "@parcel/transformer-vue": "^2.7.0",
     "parcel": "^2.7.0",
     "sharp": "^0.29.3"
   },
   "dependencies": {
-    "gh-pages": "^4.0.0"
+    "gh-pages": "^4.0.0",
+    "vue": "^3.2.38"
   }
 }

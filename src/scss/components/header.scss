@@ -150,3 +150,57 @@
         }
     }
 }
+
+.catalog {
+    background-color: #F8F8F8;
+    width: 100%;
+    position: absolute;
+    z-index: 1000;
+    &__container {
+        display: flex;
+        padding: 2rem 0;
+        
+        
+    }
+    &__categories {
+        
+    }
+    &__category {
+        color: $black;
+        font-size: 1.4rem;
+        padding: 1rem 4rem 1rem 2rem;
+        font-weight: bold;
+    }
+    &__category:hover {
+        background-color: $white;
+        color: $base-color;
+        border-radius: 0.4rem;
+        transition: 0.2s;
+    }
+    &__list-block {
+        padding: 3rem 0;
+        
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+    &__list-column {
+        h3 {
+            padding-top: 1rem;
+            font-weight: bold;
+        }
+        a {
+            font-size: 1.4rem;
+            color: $black;
+        }
+        a:hover {
+            color: $base-color;
+            transition: 0.2s;
+        }
+        li {
+            margin-top: 1.5rem;
+        }
+    }
+}

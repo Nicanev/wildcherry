@@ -8,9 +8,10 @@ html(lang="ru")
         link(rel="stylesheet", href="../scss/main.scss")
         link(rel="shortcut icon", href="../img/favicon.ico", type="image/x-icon")
     body
-        .wrapper
+        .wrapper#app
             include ../common/header
 
             block content
 
             include ../common/footer
+        script(type="module", src="../js/index.js") 

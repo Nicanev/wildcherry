@@ -13,9 +13,10 @@ header.header
                     .header__logo 
                         img(src="../img/Logo.svg", alt="Logo")
                     .header__catalog
-                        button.btn   
+                        button.btn(@click="openCatalog")   
                             span
-                                img(src="../img/icons/Catalog.svg", alt="Catalog")
+                                img(src="../img/icons/Catalog.svg", alt="Catalog", v-if="!isCatalogOpen")
+                                img(src="../img/icons/Close.svg", alt="Close", v-if="isCatalogOpen")
                             span Каталог
                     .header__search 
                         input(type="text" placeholder="Искать на WildCherry..")
@@ -40,3 +41,152 @@ header.header
                                 <path d="M22.2602 11.1429C22.2602 5.00001 17.2659 0 11.1301 0C4.99427 0 0 5.00001 0 11.1429C0 17.2857 4.99427 22.2858 11.1301 22.2858C13.7841 22.2858 16.2385 21.3429 18.1506 19.7714L23.3732 25L25 23.3713L19.7774 18.1718C21.3186 16.2574 22.2602 13.7998 22.2602 11.1429ZM11.1301 20C6.24987 20 2.2831 16.0286 2.2831 11.1429C2.2831 6.25715 6.24997 2.28572 11.1301 2.28572C16.0102 2.28572 19.9771 6.25715 19.9771 11.1429C19.9771 16.0286 16.0102 20 11.1301 20Z" fill="gray"/>
                                 </svg>
                             input(type="text" placeholder="Искать на WildCherry..")
+            .header__catalog-menu.catalog(v-if="isCatalogOpen")
+                .catalog__container
+                    .catalog__categories
+                        ul
+                            li.catalog__category(v-on:mouseover="selectCatalogCategory('Electronic')")
+                                a(href="#") Электроника
+                            li.catalog__category(v-on:mouseover="selectCatalogCategory('Clothes')")
+                                a(href="#") Одежда
+                            li.catalog__category(v-on:mouseover="selectCatalogCategory('Shoes')")
+                                a(href="#") Обувь
+                            li.catalog__category(v-on:mouseover="selectCatalogCategory('Furniture')")
+                                a(href="#") Мебель
+                    .catalog__lists-block 
+                        .electonics-list.catalog__list(v-if="currentCatalogCategory == 'Electronic'") 
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                        .clothes-list.catalog__list(v-if="currentCatalogCategory == 'Clothes'")
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Женщинам
+                                ul 
+                                    li
+                                        a(href="#") Футболки
+                                    li
+                                        a(href="#") Платья
+                                    li
+                                        a(href="#") Блузки
+                                    li
+                                        a(href="#") Свитера
+                        .shoes-list.catalog__list(v-if="currentCatalogCategory == 'Shoes'")
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Мужчинам
+                                ul 
+                                    li
+                                        a(href="#") Ботинки
+                                    li
+                                        a(href="#") Кроссовки
+                                    li
+                                        a(href="#") Кеды
+                                    li
+                                        a(href="#") Сандалии
+                        .furniture-list.catalog__list(v-if="currentCatalogCategory == 'Furniture'")
+                            .catalog__list-column 
+                                h3 
+                                    a(href="#")  Компьютерная и офисная мебель
+                                ul 
+                                    li
+                                        a(href="#") Компьютерные и офисные кресла
+                                    li
+                                        a(href="#") Офисные тумбы
+                                    li
+                                        a(href="#") Ортопедические стулья
+                                    li
+                                        a(href="#") Подставки для ног
