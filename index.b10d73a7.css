@@ -176,6 +176,7 @@ p {
 .header__catalog img {
   width: 2rem;
   height: 2rem;
+  display: none;
 }
 
 .header__catalog button {
@@ -304,7 +305,7 @@ p {
 
 @media (max-width: 48em) {
   .catalog {
-    display: none;
+    visibility: hidden;
   }
 }
 
@@ -318,6 +319,10 @@ p {
   padding: 1rem 4rem 1rem 2rem;
   font-size: 1.4rem;
   font-weight: bold;
+}
+
+.catalog__list_active {
+  display: flex !important;
 }
 
 .catalog__category:hover {
@@ -335,7 +340,7 @@ p {
   flex-wrap: wrap;
   gap: 5rem;
   margin-left: 2rem;
-  display: flex;
+  display: none;
 }
 
 .catalog__list-column h3 {
