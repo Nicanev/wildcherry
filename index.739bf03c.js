@@ -605,7 +605,8 @@ exports.default = {
     data () {
         return {
             isCatalogOpen: false,
-            currentCatalogCategory: "Electronic"
+            currentCatalogCategory: "Electronic",
+            test: "dsad"
         };
     },
     methods: {
