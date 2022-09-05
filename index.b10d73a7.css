@@ -188,6 +188,11 @@ p {
   display: flex;
 }
 
+.header__catalog button:hover {
+  background-color: #d32f5d;
+  transition: all .2s;
+}
+
 @media (max-width: 48em) {
   .header__catalog {
     display: none;
@@ -296,6 +301,12 @@ p {
   position: absolute;
 }
 
+@media (max-width: 48em) {
+  .catalog {
+    display: none;
+  }
+}
+
 .catalog__container {
   padding: 2rem 0;
   display: flex;
@@ -322,6 +333,7 @@ p {
 .catalog__list {
   flex-wrap: wrap;
   gap: 5rem;
+  margin-left: 2rem;
   display: flex;
 }
 
@@ -437,7 +449,12 @@ p {
 }
 
 .footer__list a {
+  color: #7e838c;
   font-size: 1.6rem;
+}
+
+.footer__list a:hover {
+  color: #242734;
 }
 
 .footer__copyright {
@@ -458,6 +475,10 @@ p {
 .footer__copyright a {
   color: #7e838c;
   font-size: 1.6rem;
+}
+
+.footer__copyright a:hover {
+  color: #242734;
 }
 
 .banner {
