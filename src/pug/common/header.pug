@@ -13,10 +13,13 @@ header.header
                     .header__logo 
                         img(src="../img/Logo.svg", alt="Logo")
                     .header__catalog
-                        button.btn(@click="openCatalog")   
+                        //- button.btn(@click="openCatalog")
+                        button.btn.openBtn   
                             span
-                                img(src="../img/icons/Catalog.svg", alt="Catalog", v-if="!isCatalogOpen")
-                                img(src="../img/icons/Close.svg", alt="Close", v-if="isCatalogOpen")
+                                //- img(src="../img/icons/Catalog.svg", alt="Catalog", v-if="!isCatalogOpen")
+                                //- img(src="../img/icons/Close.svg", alt="Close", v-if="isCatalogOpen")
+                                img(src="../img/icons/Catalog.svg", alt="Catalog" id="catalog-img").active
+                                img(src="../img/icons/Close.svg", alt="Close", id="close-img")
                             span Каталог
                     .header__search 
                         input(type="text" placeholder="Искать на WildCherry..")
@@ -41,21 +44,39 @@ header.header
                                 <path d="M22.2602 11.1429C22.2602 5.00001 17.2659 0 11.1301 0C4.99427 0 0 5.00001 0 11.1429C0 17.2857 4.99427 22.2858 11.1301 22.2858C13.7841 22.2858 16.2385 21.3429 18.1506 19.7714L23.3732 25L25 23.3713L19.7774 18.1718C21.3186 16.2574 22.2602 13.7998 22.2602 11.1429ZM11.1301 20C6.24987 20 2.2831 16.0286 2.2831 11.1429C2.2831 6.25715 6.24997 2.28572 11.1301 2.28572C16.0102 2.28572 19.9771 6.25715 19.9771 11.1429C19.9771 16.0286 16.0102 20 11.1301 20Z" fill="gray"/>
                                 </svg>
                             input(type="text" placeholder="Искать на WildCherry..")
-            .header__catalog-menu.catalog(v-if="isCatalogOpen")
+            //- .header__catalog-menu.catalog(v-if="isCatalogOpen")
+            .header__catalog-menu.catalog
                 .catalog__container
                     .catalog__categories
                         ul
-                            li.catalog__category(v-on:mouseover="selectCatalogCategory('Electronic')")
+                            //- li.catalog__category(v-on:mouseover="selectCatalogCategory('Electronic')")
+                            li.catalog__category#category1
                                 a(href="#") Электроника
-                            li.catalog__category(v-on:mouseover="selectCatalogCategory('Clothes')")
+                            //- li.catalog__category(v-on:mouseover="selectCatalogCategory('Clothes')")
+                            li.catalog__category#category2
                                 a(href="#") Одежда
-                            li.catalog__category(v-on:mouseover="selectCatalogCategory('Shoes')")
+                            //- li.catalog__category(v-on:mouseover="selectCatalogCategory('Shoes')")
+                            li.catalog__category#category3
                                 a(href="#") Обувь
-                            li.catalog__category(v-on:mouseover="selectCatalogCategory('Furniture')")
+                            //- li.catalog__category(v-on:mouseover="selectCatalogCategory('Furniture')")
+                            li.catalog__category#category4
                                 a(href="#") Мебель
                     .catalog__lists-block 
-                        .electonics-list.catalog__list(v-if="currentCatalogCategory == 'Electronic'") 
+                        //- .electonics-list.catalog__list(v-if="currentCatalogCategory == 'Electronic'")
+                        .catalog__list.catalog__list_active#section1
                             .catalog__list-column 
+                                h3 
+                                    a(href="#")  Телефоны и смарт-часы
+                                ul 
+                                    li
+                                        a(href="#") Смартфоны
+                                    li
+                                        a(href="#") Смарт-часы
+                                    li
+                                        a(href="#") Ассексуары
+                                    li
+                                        a(href="#") Фитнес браслеты
+                            .catalog__list-column
                                 h3 
                                     a(href="#")  Телефоны и смарт-часы
                                 ul 
@@ -139,19 +160,8 @@ header.header
                                         a(href="#") Ассексуары
                                     li
                                         a(href="#") Фитнес браслеты
-                            .catalog__list-column 
-                                h3 
-                                    a(href="#")  Телефоны и смарт-часы
-                                ul 
-                                    li
-                                        a(href="#") Смартфоны
-                                    li
-                                        a(href="#") Смарт-часы
-                                    li
-                                        a(href="#") Ассексуары
-                                    li
-                                        a(href="#") Фитнес браслеты
-                        .clothes-list.catalog__list(v-if="currentCatalogCategory == 'Clothes'")
+                        //- .clothes-list.catalog__list(v-if="currentCatalogCategory == 'Clothes'")
+                        .clothes-list.catalog__list#section2
                             .catalog__list-column 
                                 h3 
                                     a(href="#")  Женщинам
@@ -164,7 +174,8 @@ header.header
                                         a(href="#") Блузки
                                     li
                                         a(href="#") Свитера
-                        .shoes-list.catalog__list(v-if="currentCatalogCategory == 'Shoes'")
+                        //- .shoes-list.catalog__list(v-if="currentCatalogCategory == 'Shoes'")
+                        .shoes-list.catalog__list#section3
                             .catalog__list-column 
                                 h3 
                                     a(href="#")  Мужчинам
@@ -177,7 +188,8 @@ header.header
                                         a(href="#") Кеды
                                     li
                                         a(href="#") Сандалии
-                        .furniture-list.catalog__list(v-if="currentCatalogCategory == 'Furniture'")
+                        //- .furniture-list.catalog__list(v-if="currentCatalogCategory == 'Furniture'")
+                        .furniture-list.catalog__list#section4
                             .catalog__list-column 
                                 h3 
                                     a(href="#")  Компьютерная и офисная мебель

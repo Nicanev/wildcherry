@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "parcel build",
     "deploy": "gh-pages -d dist",
-    "predeploy": "npm run build --no-scope-hoist"
+    "predeploy": "npm run build"
   },
   "keywords": [
     "WildCherry",
@@ -31,6 +31,8 @@
   },
   "dependencies": {
     "gh-pages": "^4.0.0",
+    "jquery": "^3.6.1",
+    "jquery-ui-dist": "^1.13.2",
     "vue": "^3.2.38"
   }
 }

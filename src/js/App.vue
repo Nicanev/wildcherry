@@ -4,6 +4,7 @@ export default {
     return {
       isCatalogOpen: false,
       currentCatalogCategory: "Electronic",
+      test: "dsad",
     };
   },
   methods: {

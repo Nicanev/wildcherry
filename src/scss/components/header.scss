@@ -54,6 +54,7 @@
     }
     &__catalog {
         img {
+            display: none;
             width: 2rem;
             height: 2rem;
         }
@@ -154,11 +155,11 @@
         }
     }
 }
-
 .catalog {
     @media (max-width: 48em) {
-        display: none;
+        visibility: hidden;
     }
+    display: none;
     background-color: #F8F8F8;
     width: 100%;
     position: absolute;
@@ -178,6 +179,9 @@
         padding: 1rem 4rem 1rem 2rem;
         font-weight: bold;
     }
+    &__list_active {
+        display: flex !important;
+    }
     &__category:hover {
         background-color: $white;
         color: $base-color;
@@ -192,6 +196,7 @@
         flex-wrap: wrap;
         margin-left: 2rem;
         gap: 5rem;
+        display: none;
     }
     &__list-column {
         h3 {
