@@ -66,6 +66,10 @@
             gap: 0.7rem;
             display: flex;
         }
+        button:hover {
+            background-color: $base-color-hover;
+            transition: 0.2s;
+        }
         @media (max-width: 48em) {
             display: none;
         }
@@ -152,6 +156,9 @@
 }
 
 .catalog {
+    @media (max-width: 48em) {
+        display: none;
+    }
     background-color: #F8F8F8;
     width: 100%;
     position: absolute;
@@ -179,11 +186,11 @@
     }
     &__list-block {
         padding: 3rem 0;
-        
     }
     &__list {
         display: flex;
         flex-wrap: wrap;
+        margin-left: 2rem;
         gap: 5rem;
     }
     &__list-column {

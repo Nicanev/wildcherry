@@ -80,6 +80,10 @@
         }
         a {
             font-size: 1.6rem;
+            color: #7E838C;
+        }
+        a:hover {
+            color: $black;
         }
     }
     &__copyright {
@@ -96,6 +100,9 @@
             color: #7E838C;
             font-size: 1.6rem;
             
+        }
+        a:hover {
+            color: $black;
         }
     }
 }
