@@ -533,6 +533,7 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"1SICI":[function(require,module,exports) {
 var _importJqueryJs = require("./import-jquery.js");
+// import "jquery-ui-dist/jquery-ui.js"
 $(document).ready(function() {
     $(".openBtn").click(function() {
         if ($(".catalog").first().is(":hidden")) {
