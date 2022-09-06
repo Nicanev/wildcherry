@@ -769,6 +769,10 @@ p {
   display: flex;
 }
 
+.arrow-reverse:after {
+  transform: rotate(180deg);
+}
+
 .sidefilter {
   width: 35.5rem;
 }
@@ -785,15 +789,33 @@ p {
 }
 
 .sidefilter__header .sidefilter__title {
+  cursor: auto;
   margin-bottom: 0;
   font-size: 2.2rem;
 }
 
+.sidefilter__header .sidefilter__title:after {
+  background: none;
+}
+
 .sidefilter__title {
   color: #242734;
+  cursor: pointer;
   margin-bottom: 2.5rem;
   font-size: 1.8rem;
   font-weight: bold;
+  position: relative;
+}
+
+.sidefilter__title:after {
+  content: "";
+  width: 1.3rem;
+  height: .8rem;
+  background: url("arrow-sort.1439d8b8.svg") center no-repeat;
+  transition: all .4s;
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .sidefilter__reset {
