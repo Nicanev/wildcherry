@@ -1,4 +1,6 @@
 import "./import-jquery.js"
+// import "jquery-ui-dist/jquery-ui.js"
+
 $(document).ready(function () {
     $('.openBtn').click(function () {
         if ( $( ".catalog").first().is( ":hidden" ) ) {

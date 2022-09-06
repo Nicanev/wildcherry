@@ -11,7 +11,8 @@ header.header
                     .header__burger.for-mobile
                         img(src="../img/icons/burger.svg", alt="Burger")
                     .header__logo 
-                        img(src="../img/Logo.svg", alt="Logo")
+                        a(href="index.pug")
+                            img(src="../img/Logo.svg", alt="Logo")
                     .header__catalog
                         //- button.btn(@click="openCatalog")
                         button.btn.openBtn   
@@ -23,7 +24,8 @@ header.header
                             span Каталог
                     .header__search 
                         input(type="text" placeholder="Искать на WildCherry..")
-                        img(src="../img/icons/Loop.svg", alt="Search")
+                        a(href="search.pug")
+                            img(src="../img/icons/Loop.svg", alt="Search")
                     .header__buttons 
                         button.btn 
                             img(src="../img/icons/Delivery.svg", alt="Delivery")
