@@ -276,7 +276,7 @@ p {
 }
 
 .header__buttons button {
-  color: #242734;
+  color: #a0949b;
   flex-direction: column;
   align-items: center;
   gap: .5rem;
@@ -289,7 +289,14 @@ p {
   .header__buttons button span {
     display: none;
   }
+}
 
+.header__buttons button span:hover {
+  color: #000;
+  transition: all .2s;
+}
+
+@media (max-width: 48em) {
   .header__buttons {
     gap: .5rem;
   }
@@ -315,6 +322,7 @@ p {
 }
 
 .catalog__category {
+  cursor: pointer;
   color: #242734;
   padding: 1rem 4rem 1rem 2rem;
   font-size: 1.4rem;
@@ -433,15 +441,41 @@ p {
   font-size: 1.6rem;
 }
 
+.footer__social span:hover {
+  color: #242734;
+  transition: all .2s;
+}
+
 .footer__social_networks {
   gap: 2.5rem;
   display: flex;
 }
 
-.footer__social_vk, .footer__social_tg {
+.footer__social_networks svg {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.footer__social_vk {
   align-items: center;
   gap: .9rem;
   display: flex;
+}
+
+.footer__social_vk:hover path {
+  fill: #242734;
+  transition: all .2s;
+}
+
+.footer__social_tg {
+  align-items: center;
+  gap: .9rem;
+  display: flex;
+}
+
+.footer__social_tg:hover path {
+  fill: #242734;
+  transition: all .2s;
 }
 
 .footer__title {
