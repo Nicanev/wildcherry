@@ -604,6 +604,11 @@ p {
   stroke: #242734;
 }
 
+.card__favourite:active path {
+  fill: #de3162;
+  stroke: #de3162;
+}
+
 .card__discount {
   color: #de3162;
   background-color: #fdeef9;
