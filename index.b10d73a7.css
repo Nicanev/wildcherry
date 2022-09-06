@@ -291,7 +291,7 @@ p {
   }
 }
 
-.header__buttons button span:hover {
+.header__buttons button:hover span {
   color: #000;
   transition: all .2s;
 }
@@ -441,11 +441,6 @@ p {
   font-size: 1.6rem;
 }
 
-.footer__social span:hover {
-  color: #242734;
-  transition: all .2s;
-}
-
 .footer__social_networks {
   gap: 2.5rem;
   display: flex;
@@ -467,6 +462,11 @@ p {
   transition: all .2s;
 }
 
+.footer__social_vk:hover span {
+  color: #242734;
+  transition: all .2s;
+}
+
 .footer__social_tg {
   align-items: center;
   gap: .9rem;
@@ -475,6 +475,11 @@ p {
 
 .footer__social_tg:hover path {
   fill: #242734;
+  transition: all .2s;
+}
+
+.footer__social_tg:hover span {
+  color: #242734;
   transition: all .2s;
 }
 
