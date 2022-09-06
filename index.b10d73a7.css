@@ -644,8 +644,13 @@ p {
   color: #fff;
   background-color: #de3162;
   border-radius: .9rem;
-  padding: .7rem 2.2rem;
+  padding: .9rem 2.2rem;
   font-weight: bold;
+}
+
+.card__btn button:hover {
+  background-color: #d32f5d;
+  transition: all .2s;
 }
 
 .brands__title {
