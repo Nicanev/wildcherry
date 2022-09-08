@@ -533,12 +533,94 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"ebWYT":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-var _vueEsmBundlerJs = require("vue/dist/vue.esm-bundler.js");
+var _vue = require("vue");
 var _appVue = require("./App.vue");
 var _appVueDefault = parcelHelpers.interopDefault(_appVue);
-(0, _vueEsmBundlerJs.createApp)((0, _appVueDefault.default)).mount("#app");
+globalThis.__VUE_OPTIONS_API__ = true;
+globalThis.__VUE_PROD_DEVTOOLS__ = false;
+(0, _vue.createApp)((0, _appVueDefault.default)).mount("#app");
 
-},{"vue/dist/vue.esm-bundler.js":"gs3Mk","./App.vue":"gZTic","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gs3Mk":[function(require,module,exports) {
+},{"./App.vue":"gZTic","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","vue":"gs3Mk"}],"gZTic":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+let script;
+let initialize = ()=>{
+    script = require("script:./App.vue");
+    if (script.__esModule) script = script.default;
+    require("custom:./App.vue").default(script);
+    script.__scopeId = "data-v-ba422b";
+    script.__file = "/root/web-projects/wildcherry/src/js/App.vue";
+};
+initialize();
+if (module.hot) {
+    script.__hmrId = "ba422b-hmr";
+    module.hot.accept(()=>{
+        setTimeout(()=>{
+            initialize();
+            if (!__VUE_HMR_RUNTIME__.createRecord("ba422b-hmr", script)) __VUE_HMR_RUNTIME__.reload("ba422b-hmr", script);
+        }, 0);
+    });
+}
+exports.default = script;
+
+},{"script:./App.vue":"i8pst","custom:./App.vue":"cVxmO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i8pst":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = {
+    data () {
+        return {
+            isCatalogOpen: false,
+            currentCatalogCategory: "Electronic",
+            test: "dsad"
+        };
+    },
+    methods: {
+        openCatalog () {
+            this.isCatalogOpen = !this.isCatalogOpen;
+        },
+        selectCatalogCategory (category) {
+            this.currentCatalogCategory = category;
+        }
+    }
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"cVxmO":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+let NOOP = ()=>{};
+exports.default = (script)=>{};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gs3Mk":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "compile", ()=>compileToFunction);
@@ -13611,56 +13693,6 @@ const noopDirectiveTransform = ()=>({
         props: []
     });
 
-},{"@vue/shared":"3SM3y","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"gZTic":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-let script;
-let initialize = ()=>{
-    script = require("script:./App.vue");
-    if (script.__esModule) script = script.default;
-    require("custom:./App.vue").default(script);
-    script.__scopeId = "data-v-ba422b";
-    script.__file = "/root/web-projects/wildcherry/src/js/App.vue";
-};
-initialize();
-if (module.hot) {
-    script.__hmrId = "ba422b-hmr";
-    module.hot.accept(()=>{
-        setTimeout(()=>{
-            initialize();
-            if (!__VUE_HMR_RUNTIME__.createRecord("ba422b-hmr", script)) __VUE_HMR_RUNTIME__.reload("ba422b-hmr", script);
-        }, 0);
-    });
-}
-exports.default = script;
-
-},{"script:./App.vue":"i8pst","custom:./App.vue":"cVxmO","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"i8pst":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = {
-    data () {
-        return {
-            isCatalogOpen: false,
-            currentCatalogCategory: "Electronic",
-            test: "dsad"
-        };
-    },
-    methods: {
-        openCatalog () {
-            this.isCatalogOpen = !this.isCatalogOpen;
-        },
-        selectCatalogCategory (category) {
-            this.currentCatalogCategory = category;
-        }
-    }
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"cVxmO":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-let NOOP = ()=>{};
-exports.default = (script)=>{};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequire67b0")
+},{"@vue/shared":"3SM3y","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["cVgJb","ebWYT"], "ebWYT", "parcelRequire67b0")
 
 //# sourceMappingURL=index.739bf03c.js.map
