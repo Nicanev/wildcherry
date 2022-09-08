@@ -536,6 +536,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _vue = require("vue");
 var _appVue = require("./App.vue");
 var _appVueDefault = parcelHelpers.interopDefault(_appVue);
+globalThis.__VUE_OPTIONS_API__ = true;
+globalThis.__VUE_PROD_DEVTOOLS__ = false;
 const app = (0, _vue.createApp)((0, _appVueDefault.default));
 app.mount("#app");
 

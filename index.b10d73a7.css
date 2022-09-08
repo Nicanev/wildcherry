@@ -110,6 +110,20 @@ p {
   }
 }
 
+.slide-enter-active, .slide-leave-active {
+  transition: max-height .8s ease-in-out;
+}
+
+.slide-enter-to, .slide-leave-from {
+  max-height: 1000px;
+  overflow: hidden;
+}
+
+.slide-enter-from, .slide-leave-to {
+  max-height: 0;
+  overflow: hidden;
+}
+
 .header__upmenu {
   color: #fff;
   background-color: #242734;
@@ -176,7 +190,6 @@ p {
 .header__catalog img {
   width: 2rem;
   height: 2rem;
-  display: none;
 }
 
 .header__catalog button {
@@ -306,7 +319,6 @@ p {
   width: 100%;
   z-index: 1000;
   background-color: #f8f8f8;
-  display: none;
   position: absolute;
   box-shadow: 0 4px 4px #00000040;
 }
@@ -349,7 +361,7 @@ p {
   flex-wrap: wrap;
   gap: 5rem;
   margin-left: 2rem;
-  display: none;
+  display: flex;
 }
 
 .catalog__list-column h3 {
