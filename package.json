@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "website of the international marketplace of clothing, footwear, electronics, children's goods, household goods and other goods.",
   "source": "src/pug/index.pug",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build",
+    "build": "parcel build --no-scope-hoist",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
+  },
+  "alias": {
+    "vue": "vue/dist/vue.esm-bundler.js"
   },
   "keywords": [
     "WildCherry",

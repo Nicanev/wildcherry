@@ -1,0 +1,16 @@
+.slide-enter-active,
+.slide-leave-active {
+  transition: max-height 0.6s ease-in-out;
+}
+
+.slide-enter-to,
+.slide-leave-from {
+  overflow: hidden;
+  max-height: 1000px;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  overflow: hidden;
+  max-height: 0;
+}

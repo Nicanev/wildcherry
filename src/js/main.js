@@ -29,4 +29,25 @@ $(document).ready(function () {
         $('.catalog__list_active').toggleClass('catalog__list_active');
         $('#section4').toggleClass('catalog__list_active');
     })
+    $(".sidefilter__title").click(function () {
+        $(this).toggleClass('arrow-reverse');
+        if ($(this).text() == "Категория") {
+            $("#category-filter").slideToggle("slow");
+        }
+        if ($(this).text() == "Срок доставки") {
+            $("#delivery-filter").slideToggle("slow");
+        }
+        if ($(this).text() == "Бренд") {
+            $("#brand-filter").slideToggle("slow");
+        }
+        if ($(this).text() == "Продавец") {
+            $("#seller-filter").slideToggle("slow");
+        }
+        if ($(this).text() == "Цена, ₽") {
+            $("#cost-filter").slideToggle("slow");
+        }
+        if ($(this).text() == "Цвет") {
+            $("#color-filter").slideToggle("slow");
+        }
+    })
 });

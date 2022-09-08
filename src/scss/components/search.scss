@@ -12,6 +12,10 @@
     }
 }
 
+.arrow-reverse::after {
+    transform: rotate(180deg);
+}
+
 .sidefilter {
     @media (max-width: 48em) {
         display: none;
@@ -23,6 +27,10 @@
         .sidefilter__title {
             font-size: 2.2rem;
             margin-bottom: 0;
+            cursor: auto;
+        } 
+        .sidefilter__title::after {
+            background: none;
         } 
     }
     &__title {
@@ -30,6 +38,20 @@
         font-weight: bold;
         color: $black;
         margin-bottom: 2.5rem;
+        position: relative;
+        cursor: pointer;
+        
+    }
+    &__title::after {
+        position: absolute;
+        
+        content: "";
+        width: 1.3rem;
+        height: 0.8rem;
+        background: url("../img/icons/arrow-sort.svg") no-repeat center center;
+        right: 0;
+        top: 0;
+        transition: 0.4s;
     }
     &__reset {
         cursor: pointer;
@@ -141,7 +163,6 @@
         position: relative;
     }
     input:focus {
-        // border: 0.2rem solid $base-color;
         border: none;
         outline: 0.2rem solid $base-color;
         z-index: 5;

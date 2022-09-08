@@ -72,52 +72,37 @@ main.main
                             <svg viewBox="0 0 15 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M0.292787 0.305288C0.480314 0.117817 0.734622 0.0125018 0.999786 0.0125018C1.26495 0.0125018 1.51926 0.117817 1.70679 0.305288L6.99979 5.59829L12.2928 0.305288C12.385 0.209778 12.4954 0.133596 12.6174 0.0811869C12.7394 0.0287779 12.8706 0.00119157 13.0034 3.77571e-05C13.1362 -0.00111606 13.2678 0.0241854 13.3907 0.0744663C13.5136 0.124747 13.6253 0.199 13.7192 0.292893C13.8131 0.386786 13.8873 0.498438 13.9376 0.621334C13.9879 0.74423 14.0132 0.87591 14.012 1.00869C14.0109 1.14147 13.9833 1.27269 13.9309 1.39469C13.8785 1.5167 13.8023 1.62704 13.7068 1.71929L8.41379 7.01229L13.7068 12.3053C13.8889 12.4939 13.9897 12.7465 13.9875 13.0087C13.9852 13.2709 13.88 13.5217 13.6946 13.7071C13.5092 13.8925 13.2584 13.9977 12.9962 14C12.734 14.0022 12.4814 13.9014 12.2928 13.7193L6.99979 8.42629L1.70679 13.7193C1.51818 13.9014 1.26558 14.0022 1.00339 14C0.741188 13.9977 0.490376 13.8925 0.304968 13.7071C0.11956 13.5217 0.0143906 13.2709 0.0121121 13.0087C0.00983372 12.7465 0.110629 12.4939 0.292787 12.3053L5.58579 7.01229L0.292787 1.71929C0.105316 1.53176 0 1.27745 0 1.01229C0 0.747124 0.105316 0.492816 0.292787 0.305288V0.305288Z" fill="white"/>
                             </svg>
-                    .sidefilter__filters 
-                        .sidefilter__filter-block 
-                            .sidefilter__title Категория
-                            .sidefilter__filter-item
-                                input(type="checkbox", name="Защитное стекло", id="glass")
-                                label(for="glass") Защитное стекло (5)
-                            .sidefilter__filter-item
-                                input(type="checkbox", name="Смартфон", id="phone")
-                                label(for="phone") Смартфон (10)
-                        .sidefilter__filter-block 
-                            .sidefilter__title Срок доставки
-                            .sidefilter__filter-item
-                                input(type="radio", name="delivery", id="day1")
-                                label(for="day1") 1 день
-                            .sidefilter__filter-item
-                                input(type="radio", name="delivery", id="day2")
-                                label(for="day2") 2 дня
-                            .sidefilter__filter-item
-                                input(type="radio", name="delivery", id="day3")
-                                label(for="day3") 3 дня
-                        .sidefilter__filter-block 
-                            .sidefilter__title Бренд
-                            .sidefilter__filter-item
-                                input(type="checkbox", name="Nothing", id="brand")
-                                label(for="brand") Nothing
-                        .sidefilter__filter-block 
-                            .sidefilter__title Продавец
-                            .sidefilter__filter-item
-                                input(type="checkbox", name="MobileShop", id="seller")
-                                label(for="seller") MobileShop
-                        .sidefilter__filter-block 
-                            .sidefilter__title Цена, ₽
-                            .sidefilter__cost-range.cost-range
-                                .cost-range__start
-                                    span От
-                                    input(type="text", value="542")
-                                .cost-range__end
-                                    span До
-                                    input(type="text", value="52490")  
-
-                        .sidefilter__filter-block 
-                            .sidefilter__title Цвет
-                            .sidefilter__filter-colorpick.colorpick
-                                .colorpick__color.colorpick__white 
-                                .colorpick__color.colorpick__black 
-                                .colorpick__color.colorpick__red 
+                    ul.sidefilter__filters 
+                        li(v-for="filter in filters") 
+                            .sidefilter__filter-block(v-if="filter.type=='check'")
+                                .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
+                                ul.siderfilter__items(v-if="!filter.hide")
+                                    li.sidefilter__filter-item(v-for="item in filter.items") 
+                                        input(type="checkbox", :id="item.id")
+                                        label(:for="item.id") {{item.name}}
+                            .sidefilter__filter-block(v-if="filter.type=='radio'") 
+                                .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
+                                ul.siderfilter__items(v-if="!filter.hide")
+                                    li.sidefilter__filter-item(v-for="item in filter.items") 
+                                        input(type="radio", name="delivery", :id="item.id")
+                                        label(:for="item.id") {{item.name}}                           
+                            .sidefilter__filter-block(v-if="filter.type=='cost'")  
+                                .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
+                                .siderfilter__items(v-if="!filter.hide")
+                                    .sidefilter__cost-range.cost-range
+                                        .cost-range__start
+                                            span От
+                                            input(type="text", value="542")
+                                        .cost-range__end
+                                            span До
+                                            input(type="text", value="52490")  
+                            .sidefilter__filter-block(v-if="filter.type=='color'") 
+                                .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
+                                .siderfilter__items(v-if="!filter.hide")
+                                    .sidefilter__filter-colorpick.colorpick
+                                        .colorpick__color.colorpick__white 
+                                        .colorpick__color.colorpick__black 
+                                        .colorpick__color.colorpick__red 
                 .search__main
                     .search__assortment.assortment 
                         .assortment__sort 
@@ -138,7 +123,7 @@ main.main
                                                     img(src="../img/products/product_1.jpg?as=webp", alt="Nothing Phone")
                                                     .card__favourite
                                                         <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                            <path d="M19.4687 6.00589L19.47 6.02166L19.4724 6.03732C19.4871 6.13647 19.5815 6.87817 19.3082 8.12232L19.3081 8.12246C18.9148 9.91563 18.0065 11.5466 16.68 12.8402C16.6795 12.8407 16.679 12.8412 16.6785 12.8417L9.94311 19.3042L3.32163 12.8415L3.32135 12.8412C1.99413 11.5478 1.08526 9.91591 0.691748 8.12244L0.691729 8.12235C0.418355 6.87747 0.512926 6.13609 0.527737 6.03813L0.5302 6.02184L0.531585 6.00542C0.808521 2.72274 2.93737 0.499998 5.44562 0.499998C7.10462 0.499998 8.61288 1.45305 9.50542 3.09568L9.93994 3.89539L10.3819 3.09974C11.2804 1.48198 12.8588 0.500411 14.5543 0.500411C17.0629 0.500411 19.1914 2.72313 19.4687 6.00589Z" fill="black" stroke="#EAEAF6"/>
+                                                        <path d="M19.4687 6.00589L19.47 6.02166L19.4724 6.03732C19.4871 6.13647 19.5815 6.87817 19.3082 8.12232L19.3081 8.12246C18.9148 9.91563 18.0065 11.5466 16.68 12.8402C16.6795 12.8407 16.679 12.8412 16.6785 12.8417L9.94311 19.3042L3.32163 12.8415L3.32135 12.8412C1.99413 11.5478 1.08526 9.91591 0.691748 8.12244L0.691729 8.12235C0.418355 6.87747 0.512926 6.13609 0.527737 6.03813L0.5302 6.02184L0.531585 6.00542C0.808521 2.72274 2.93737 0.499998 5.44562 0.499998C7.10462 0.499998 8.61288 1.45305 9.50542 3.09568L9.93994 3.89539L10.3819 3.09974C11.2804 1.48198 12.8588 0.500411 14.5543 0.500411C17.0629 0.500411 19.1914 2.72313 19.4687 6.00589Z" fill="black" stroke="#EAEAF6"/>
                                                         </svg>
                                                     .card__discount.active #{product.discount}
                                                     .card__advertisement.active Реклама
