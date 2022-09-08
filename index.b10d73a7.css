@@ -111,7 +111,7 @@ p {
 }
 
 .slide-enter-active, .slide-leave-active {
-  transition: max-height .8s ease-in-out;
+  transition: max-height .6s ease-in-out;
 }
 
 .slide-enter-to, .slide-leave-from {
