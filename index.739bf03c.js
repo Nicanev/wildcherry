@@ -536,9 +536,8 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _vue = require("vue");
 var _appVue = require("./App.vue");
 var _appVueDefault = parcelHelpers.interopDefault(_appVue);
-globalThis.__VUE_OPTIONS_API__ = true;
-globalThis.__VUE_PROD_DEVTOOLS__ = false;
-(0, _vue.createApp)((0, _appVueDefault.default)).mount("#app");
+const app = (0, _vue.createApp)((0, _appVueDefault.default));
+app.mount("#app");
 
 },{"./App.vue":"gZTic","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","vue":"gs3Mk"}],"gZTic":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
