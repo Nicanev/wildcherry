@@ -75,34 +75,37 @@ main.main
                     ul.sidefilter__filters 
                         li(v-for="filter in filters") 
                             .sidefilter__filter-block(v-if="filter.type=='check'")
-                                .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
-                                ul.siderfilter__items(v-if="!filter.hide")
-                                    li.sidefilter__filter-item(v-for="item in filter.items") 
-                                        input(type="checkbox", :id="item.id")
-                                        label(:for="item.id") {{item.name}}
-                            .sidefilter__filter-block(v-if="filter.type=='radio'") 
-                                .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
-                                ul.siderfilter__items(v-if="!filter.hide")
-                                    li.sidefilter__filter-item(v-for="item in filter.items") 
-                                        input(type="radio", name="delivery", :id="item.id")
-                                        label(:for="item.id") {{item.name}}                           
+                                .sidefilter__title(@click="filter.hide = !filter.hide" :class="{'arrow-reverse' : filter.hide}") {{filter.title}}
+                                transition(name="slide")
+                                    ul.siderfilter__items(v-if="!filter.hide")
+                                        li.sidefilter__filter-item(v-for="item in filter.items") 
+                                            input(type="checkbox", :id="item.id")
+                                            label(:for="item.id") {{item.name}}
+                                .sidefilter__filter-block(v-if="filter.type=='radio'") 
+                                    .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
+                                    ul.siderfilter__items(v-if="!filter.hide")
+                                        li.sidefilter__filter-item(v-for="item in filter.items") 
+                                            input(type="radio", name="delivery", :id="item.id")
+                                            label(:for="item.id") {{item.name}}                           
                             .sidefilter__filter-block(v-if="filter.type=='cost'")  
-                                .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
-                                .siderfilter__items(v-if="!filter.hide")
-                                    .sidefilter__cost-range.cost-range
-                                        .cost-range__start
-                                            span От
-                                            input(type="text", value="542")
-                                        .cost-range__end
-                                            span До
-                                            input(type="text", value="52490")  
+                                .sidefilter__title(@click="filter.hide = !filter.hide" :class="{'arrow-reverse' : filter.hide}") {{filter.title}}
+                                transition(name="slide")
+                                    .siderfilter__items(v-if="!filter.hide")
+                                        .sidefilter__cost-range.cost-range
+                                            .cost-range__start
+                                                span От
+                                                input(type="text", value="542")
+                                            .cost-range__end
+                                                span До
+                                                input(type="text", value="52490")  
                             .sidefilter__filter-block(v-if="filter.type=='color'") 
-                                .sidefilter__title(@click="filter.hide = !filter.hide") {{filter.title}}
-                                .siderfilter__items(v-if="!filter.hide")
-                                    .sidefilter__filter-colorpick.colorpick
-                                        .colorpick__color.colorpick__white 
-                                        .colorpick__color.colorpick__black 
-                                        .colorpick__color.colorpick__red 
+                                .sidefilter__title(@click="filter.hide = !filter.hide" :class="{'arrow-reverse' : filter.hide}") {{filter.title}}
+                                transition(name="slide")
+                                    .siderfilter__items(v-if="!filter.hide")
+                                        .sidefilter__filter-colorpick.colorpick
+                                            .colorpick__color.colorpick__white 
+                                            .colorpick__color.colorpick__black 
+                                            .colorpick__color.colorpick__red 
                 .search__main
                     .search__assortment.assortment 
                         .assortment__sort 
