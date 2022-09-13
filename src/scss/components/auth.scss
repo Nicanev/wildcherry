@@ -1,0 +1,88 @@
+.auth {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    align-items: center;
+    &__body {
+        width: 42.6rem;
+        padding: 2rem 4rem 4rem;
+        border-radius: 0.8rem;
+        box-shadow: 0 0 20px rgb(0 0 0 / 10%);
+    }
+    &__title {
+        h2 {
+            color: $black;
+            font-size: 2.4rem;
+            font-weight: bold;
+            margin-bottom: 3.2rem;
+        }
+    }
+    &__img {
+        img {
+            width: 16rem;
+            height: 4rem;
+            object-fit: contain;
+        }
+        margin-bottom: 3.2rem;
+    }
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    &__input {
+        width: 100%;
+        height: 5rem;
+        text-indent: 1rem;
+        font-size: 1.6rem;
+        border: 0.2rem solid rgb(175, 175, 175);
+        border-radius: 0.5rem;
+        transition: .2s;
+    }
+    &__input:hover {
+        border: 0.2rem solid $base-color;
+        transition: .2s;
+    }
+    &__input:focus {
+        border: 0.2rem solid $base-color;
+    }
+    &__item {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+    }
+    &__button {
+        width: 100%;
+        background-color: $base-color;
+        height: 4.8rem;
+        border-radius: 1rem;
+        text-align: center;
+        font-size: 1.6rem;
+        color: $white;
+        font-weight: bold;
+        transition: .2s;
+    }
+    &__button:hover {
+        background-color: $base-color-hover;
+
+    }
+    &__label {
+        position: absolute;
+        pointer-events: none;
+        left: 1.5rem;
+        right: 1.5rem;
+        top: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: 5rem;
+        font-size: 1.6rem;
+        transition: .3s;
+        color: $gray;
+    }
+}
+.form__input:focus~.form__label,
+.form__input:not(:focus):valid~.form__label {
+    top: -1.5rem;
+    font-size: 1rem;
+}

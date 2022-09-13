@@ -1,12 +1,22 @@
 .banner {
     margin-top: 3.5rem;
     cursor: pointer;
+    font-size: 1rem;
     &__img {
         img {
             border-radius: 12px;
             width: 100%;
+            
             object-fit: cover;
         }
         
     }
+    
+}
+.swiper {
+    width: 100%;
+    height: 30rem;
+}
+.swiper-wrapper {
+    overflow: hidden;
 }

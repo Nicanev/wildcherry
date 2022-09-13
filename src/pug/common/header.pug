@@ -35,9 +35,10 @@ header.header
                         button.btn  
                             img(src="../img/icons/Cart.svg", alt="Cart")
                             span Корзина
-                        button.btn  
-                            img(src="../img/icons/User.svg", alt="Profile")
-                            span Профиль
+                        a(href="auth.pug") 
+                            button.btn  
+                                img(src="../img/icons/User.svg", alt="Profile")
+                                span Профиль
             .header__container
                 .header__search_mobile.for-mobile
                             .loop
