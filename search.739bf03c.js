@@ -552,14 +552,19 @@ parcelHelpers.export(exports, "bannerSwiper", ()=>bannerSwiper);
 var _swiper = require("swiper");
 var _swiperDefault = parcelHelpers.interopDefault(_swiper);
 function bannerSwiper() {
-    const bannerSwiper = new (0, _swiperDefault.default)(".banner__swiper", {
+    const SwiperBanner = new (0, _swiperDefault.default)(".banner__swiper", {
         loop: true,
-        slidesPerView: 4,
+        modules: [
+            (0, _swiper.Navigation)
+        ],
+        slidesPerView: 1,
         slidesPerGroup: 1,
         wrapperClass: "banner__swiper-wrapper",
         slideClass: "banner__swiper-slide",
+        spaceBetween: 40,
         navigation: {
-            nextEl: ".banner__swiper-btn-next"
+            nextEl: ".banner__swiper-btn-next",
+            prevEl: ".banner__swiper-btn-back"
         }
     });
 }
