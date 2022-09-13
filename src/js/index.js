@@ -9,6 +9,7 @@ globalThis.__VUE_PROD_DEVTOOLS__ = false;
 const app = createApp(App);
 app.mount("#app");
 
+
 document.addEventListener('DOMContentLoaded', function(){
     bannerSwiper();
 });
